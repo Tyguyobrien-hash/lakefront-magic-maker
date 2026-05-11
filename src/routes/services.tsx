@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Anchor, Wrench, Waves, Hammer, LifeBuoy, Sparkles, Phone } from "lucide-react";
+import { Anchor, Wrench, Waves, Phone } from "lucide-react";
 import installImg from "@/assets/delta-install-grid.jpeg";
 import hoistImg from "@/assets/delta-hoist-grid.jpeg";
 import removalImg from "@/assets/delta-removal.jpeg";
@@ -20,9 +20,6 @@ const services = [
   { icon: Anchor, img: installImg, title: "Dock Installation", text: "Custom layouts, leveled and anchored for any lake bed — sand, muck, or rock." },
   { icon: Wrench, img: hoistImg, title: "Boat Hoist Installation", text: "Vertical, cantilever, and pontoon-style lifts sized to your boat and shoreline." },
   { icon: Waves, img: removalImg, title: "Seasonal Removal", text: "Fall pull-outs, on-shore staging, and spring re-installs scheduled ahead of time." },
-  { icon: Hammer, title: "Repairs & Adjustments", text: "Re-leveling, hardware swaps, decking replacement — quick fixes that last." },
-  { icon: LifeBuoy, title: "Hoist Maintenance", text: "Cable inspections, wheel and motor service, canopy fitting and repair." },
-  { icon: Sparkles, title: "Accessories & Upgrades", text: "Ladders, bumpers, lighting, and decking upgrades to elevate your dock." },
 ];
 
 function ServicesPage() {
