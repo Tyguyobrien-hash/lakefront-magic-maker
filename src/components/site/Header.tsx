@@ -18,15 +18,14 @@ export function Header() {
         <nav className="hidden items-center gap-8 md:flex">
           <Link to="/" className={linkCls} activeOptions={{ exact: true }} activeProps={{ className: "text-primary" }}>Home</Link>
           <Link to="/services" className={linkCls} activeProps={{ className: "text-primary" }}>Services</Link>
-          <Link to="/about" className={linkCls} activeProps={{ className: "text-primary" }}>About</Link>
-          <Link to="/contact" className={linkCls} activeProps={{ className: "text-primary" }}>Contact</Link>
+          <a href="tel:7346469055" className={linkCls}>Call</a>
         </nav>
-        <Link
-          to="/contact"
+        <a
+          href="tel:7346469055"
           className="hidden items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-[var(--transition-smooth)] hover:bg-primary-glow sm:inline-flex"
         >
-          <Phone className="h-4 w-4" /> Get a Quote
-        </Link>
+          <Phone className="h-4 w-4" /> (734) 646-9055
+        </a>
       </div>
     </header>
   );
