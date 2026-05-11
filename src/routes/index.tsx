@@ -160,7 +160,6 @@ function Index() {
             {[
               "Free quotes & honest pricing",
               "Spring installs and fall removals scheduled in advance",
-              "Adjustments after install at no extra charge",
               "Local crew, fast response across SE Michigan",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm">
