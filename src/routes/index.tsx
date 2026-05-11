@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Link } from "@tanstack/react-router";
-import { Anchor, Wrench, Waves, ShieldCheck, Star, ArrowRight, CheckCircle2 } from "lucide-react";
-import heroImg from "@/assets/hero-dock.jpg";
-import installImg from "@/assets/install.jpg";
-import hoistImg from "@/assets/hoist.jpg";
-import removalImg from "@/assets/removal.jpg";
+import { Anchor, Wrench, Waves, ShieldCheck, Star, ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import heroImg from "@/assets/delta-boat-flag.jpeg";
+import installImg from "@/assets/delta-install-grid.jpeg";
+import hoistImg from "@/assets/delta-hoist-grid.jpeg";
+import removalImg from "@/assets/delta-removal.jpeg";
+import teamImg from "@/assets/delta-team.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -43,18 +43,18 @@ function Index() {
             service. Quick, timely, and built to last across every Michigan season.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              to="/contact"
+            <a
+              href="tel:7346469055"
               className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-elegant)] transition-[var(--transition-smooth)] hover:scale-[1.03]"
             >
-              Book Your Install <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              to="/services"
+              <Phone className="h-4 w-4" /> Call (734) 646-9055
+            </a>
+            <a
+              href="tel:7346469055"
               className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition-[var(--transition-smooth)] hover:bg-white/20"
             >
-              See Services
-            </Link>
+              Request a Quote <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
@@ -173,8 +173,8 @@ function Index() {
         <div className="relative">
           <div className="absolute -inset-4 rounded-3xl bg-[image:var(--gradient-primary)] opacity-20 blur-2xl" />
           <img
-            src={installImg}
-            alt="Delta Dock & Hoist crew installing a dock"
+            src={teamImg}
+            alt="The Delta Dock & Hoist team in their shop"
             loading="lazy"
             width={1280}
             height={960}
@@ -196,12 +196,12 @@ function Index() {
                 fill up fast.
               </p>
             </div>
-            <Link
-              to="/contact"
+            <a
+              href="tel:7346469055"
               className="inline-flex w-fit items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-soft)] transition-[var(--transition-smooth)] hover:scale-[1.03] md:justify-self-end"
             >
-              Request a Free Quote <ArrowRight className="h-4 w-4" />
-            </Link>
+              <Phone className="h-4 w-4" /> Call (734) 646-9055
+            </a>
           </div>
         </div>
       </section>

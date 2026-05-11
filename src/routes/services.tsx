@@ -1,8 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Anchor, Wrench, Waves, Hammer, LifeBuoy, Sparkles, ArrowRight } from "lucide-react";
-import installImg from "@/assets/install.jpg";
-import hoistImg from "@/assets/hoist.jpg";
-import removalImg from "@/assets/removal.jpg";
+import { createFileRoute } from "@tanstack/react-router";
+import { Anchor, Wrench, Waves, Hammer, LifeBuoy, Sparkles, Phone } from "lucide-react";
+import installImg from "@/assets/delta-install-grid.jpeg";
+import hoistImg from "@/assets/delta-hoist-grid.jpeg";
+import removalImg from "@/assets/delta-removal.jpeg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -58,9 +58,9 @@ function ServicesPage() {
         <div className="rounded-3xl bg-primary p-10 text-primary-foreground md:p-14">
           <h2 className="font-serif text-3xl md:text-4xl">Not sure what you need?</h2>
           <p className="mt-3 max-w-xl text-primary-foreground/80">Send us your shoreline photos and we’ll recommend the right setup — no pressure, no fees.</p>
-          <Link to="/contact" className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-[var(--transition-smooth)] hover:scale-[1.03]">
-            Get a Free Consultation <ArrowRight className="h-4 w-4" />
-          </Link>
+          <a href="tel:7346469055" className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-[var(--transition-smooth)] hover:scale-[1.03]">
+            <Phone className="h-4 w-4" /> Call (734) 646-9055
+          </a>
         </div>
       </section>
     </div>

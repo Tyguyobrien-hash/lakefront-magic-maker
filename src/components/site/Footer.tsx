@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Anchor, MapPin, Phone, Mail } from "lucide-react";
+import { Anchor, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -21,16 +21,17 @@ export function Footer() {
           <h4 className="mb-3 font-serif text-base">Explore</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/80">
             <li><Link to="/services" className="hover:text-accent">Services</Link></li>
-            <li><Link to="/about" className="hover:text-accent">About</Link></li>
-            <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
+            <li><a href="tel:7346469055" className="hover:text-accent">Call Us</a></li>
           </ul>
         </div>
         <div>
           <h4 className="mb-3 font-serif text-base">Reach Us</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/80">
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> South East Michigan</li>
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> Call for a quote</li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> info@deltadockhoist.com</li>
+            <li className="flex items-center gap-2">
+              <Phone className="h-4 w-4" />
+              <a href="tel:7346469055" className="hover:text-accent">(734) 646-9055</a>
+            </li>
           </ul>
         </div>
       </div>
