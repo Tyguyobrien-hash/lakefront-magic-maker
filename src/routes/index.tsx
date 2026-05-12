@@ -5,14 +5,41 @@ import installImg from "@/assets/delta-install-grid.jpeg";
 import hoistImg from "@/assets/delta-hoist-grid.jpeg";
 import removalImg from "@/assets/delta-removal.jpeg";
 import teamImg from "@/assets/delta-team.jpeg";
+import deltaClip from "@/assets/video/delta-clip.mp4";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Delta Dock & Hoist LLC — Dock Installation in SE Michigan" },
-      { name: "description", content: "5-star rated dock and boat hoist installation, removal, and seasonal service in South East Michigan. Quick, timely, and friendly." },
-      { property: "og:title", content: "Delta Dock & Hoist LLC" },
-      { property: "og:description", content: "Premium dock & hoist services across SE Michigan lakes." },
+      { title: "Delta Dock & Hoist | Professional Boat Hoist Repair & Dock Services in SE Michigan" },
+      { name: "description", content: "Delta Dock & Hoist provides professional boat hoist repair, dock installation, removal, and seasonal service across South East Michigan. 5-star rated, fully insured, friendly local crew." },
+      { property: "og:title", content: "Delta Dock & Hoist | Professional Boat Hoist Repair & Dock Services in SE Michigan" },
+      { property: "og:description", content: "Professional boat hoist repair and dock services across South East Michigan lakes. 5-star rated and fully insured." },
+      { property: "og:image", content: heroImg },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: heroImg },
+      { rel: "canonical", href: "https://deltadockandhoist.com/" } as any,
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Delta Dock & Hoist LLC",
+          image: "https://deltadockandhoist.com/og-image.jpg",
+          telephone: "+1-734-646-9055",
+          email: "deltadock.hoist@gmail.com",
+          url: "https://deltadockandhoist.com/",
+          areaServed: [
+            "White Lake","Whitmore Lake","Lake Orion","Pinckney","Livingston County",
+            "Fenton","Brighton","Howell","Village of Clarkston","Waterford Township",
+            "Chelsea","Milford",
+          ],
+          address: { "@type": "PostalAddress", addressRegion: "MI", addressCountry: "US" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "4" },
+        }),
+      },
     ],
   }),
   component: Index,
@@ -77,6 +104,33 @@ function Index() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* VIDEO */}
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-center">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-glow">See us in action</span>
+            <h2 className="mt-3 font-serif text-4xl md:text-5xl">Watch the Delta crew at work.</h2>
+            <p className="mt-5 text-muted-foreground">
+              From custom barge installs to careful seasonal removals, here's a quick
+              look at how we treat every Michigan shoreline.
+            </p>
+          </div>
+          <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-elegant)]">
+            <video
+              src={deltaClip}
+              poster={heroImg}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Delta Dock & Hoist crew installing a dock and boat hoist on a Michigan lake"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
