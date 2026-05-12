@@ -18,6 +18,7 @@ export function Header() {
         <nav className="hidden items-center gap-8 md:flex">
           <Link to="/" className={linkCls} activeOptions={{ exact: true }} activeProps={{ className: "text-primary" }}>Home</Link>
           <Link to="/services" className={linkCls} activeProps={{ className: "text-primary" }}>Services</Link>
+          <Link to="/gallery" className={linkCls} activeProps={{ className: "text-primary" }}>Our Work</Link>
           <a href="tel:7346469055" className={linkCls}>Call</a>
         </nav>
         <a

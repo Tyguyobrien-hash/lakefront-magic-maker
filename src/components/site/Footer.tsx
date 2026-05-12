@@ -1,5 +1,20 @@
 import { Link } from "@tanstack/react-router";
-import { Anchor, MapPin, Phone } from "lucide-react";
+import { Anchor, MapPin, Mail, Phone } from "lucide-react";
+
+const locations = [
+  "White Lake",
+  "Whitmore Lake",
+  "Lake Orion",
+  "Pinckney",
+  "Livingston County",
+  "Fenton",
+  "Brighton",
+  "Howell",
+  "Village of Clarkston",
+  "Waterford Township",
+  "Chelsea",
+  "Milford",
+];
 
 export function Footer() {
   return (
@@ -21,6 +36,7 @@ export function Footer() {
           <h4 className="mb-3 font-serif text-base">Explore</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/80">
             <li><Link to="/services" className="hover:text-accent">Services</Link></li>
+            <li><Link to="/gallery" className="hover:text-accent">Our Work</Link></li>
             <li><a href="tel:7346469055" className="hover:text-accent">Call Us</a></li>
           </ul>
         </div>
@@ -32,6 +48,22 @@ export function Footer() {
               <Phone className="h-4 w-4" />
               <a href="tel:7346469055" className="hover:text-accent">(734) 646-9055</a>
             </li>
+            <li className="flex items-center gap-2">
+              <Mail className="h-4 w-4" />
+              <a href="mailto:deltadock.hoist@gmail.com" className="hover:text-accent break-all">deltadock.hoist@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-primary-foreground/10">
+        <div className="mx-auto max-w-6xl px-6 py-10">
+          <h4 className="mb-4 font-serif text-base">Service Locations</h4>
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-primary-foreground/80 sm:grid-cols-3 md:grid-cols-4">
+            {locations.map((loc) => (
+              <li key={loc} className="flex items-center gap-2">
+                <MapPin className="h-3.5 w-3.5 text-accent" /> {loc}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
