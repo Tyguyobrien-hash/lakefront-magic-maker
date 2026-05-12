@@ -122,23 +122,61 @@ function Index() {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
+      {/* REVIEWS */}
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-4xl px-6 py-24 text-center">
-          <div className="mb-6 flex justify-center gap-1">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} className="h-5 w-5 fill-accent text-accent" />
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              What customers say
+            </span>
+            <h2 className="mt-3 font-serif text-4xl md:text-5xl">
+              Trusted across the lake community.
+            </h2>
+          </div>
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {[
+              {
+                quote:
+                  "By far the most legit Dock and Hoist Installation business in South East Michigan. Quick and timely, and the guys are always super friendly, and catering to whatever adjustments I need. Can't recommend them enough!",
+                name: "Logan Willis",
+                source: "Google Review",
+              },
+              {
+                quote:
+                  "Professional, prompt, dependable, experienced, and courteous service.",
+                name: "Todd Dickinson",
+                source: "Facebook Recommendation",
+              },
+              {
+                quote: "Great work, very cool boat!",
+                name: "Cameron Gaden",
+                source: "Facebook Recommendation",
+              },
+              {
+                quote:
+                  "The Delta crew moved a boat hoist that I bought used on Marketplace. They did pick up, delivery and install in about an hour or so and the hoist had to be transported 3/4 to 1 mile. If you're looking for a quality team to install, remove or relocate a dock or a hoist you need to call Delta Dock & Hoist. They will do a great job and their custom built barge is amazing to see in action.",
+                name: "Timothy McDonnell",
+                source: "Facebook Recommendation",
+              },
+            ].map((r) => (
+              <article
+                key={r.name}
+                className="rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 p-7 backdrop-blur"
+              >
+                <div className="mb-4 flex gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                  ))}
+                </div>
+                <blockquote className="font-serif text-lg leading-relaxed text-primary-foreground/95">
+                  "{r.quote}"
+                </blockquote>
+                <p className="mt-5 text-xs uppercase tracking-[0.2em] text-primary-foreground/70">
+                  — {r.name} · {r.source}
+                </p>
+              </article>
             ))}
           </div>
-          <blockquote className="font-serif text-2xl leading-relaxed md:text-3xl">
-            “By far the most legit Dock and Hoist Installation business in South
-            East Michigan. Quick and timely, and the guys are always super
-            friendly, and catering to whatever adjustments I need. Can’t recommend
-            them enough!”
-          </blockquote>
-          <p className="mt-6 text-sm uppercase tracking-[0.2em] text-primary-foreground/70">
-            — Logan Willis, Google Review
-          </p>
         </div>
       </section>
 
