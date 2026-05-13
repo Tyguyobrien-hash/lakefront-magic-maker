@@ -10,7 +10,6 @@ const locations = [
   "Fenton",
   "Brighton",
   "Howell",
-  "Village of Clarkston",
   "Waterford Township",
   "Chelsea",
   "Milford",
