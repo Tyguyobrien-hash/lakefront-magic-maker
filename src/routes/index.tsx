@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
           url: "https://deltadockandhoist.com/",
           areaServed: [
             "White Lake","Whitmore Lake","Lake Orion","Pinckney","Livingston County",
-            "Fenton","Brighton","Howell","Village of Clarkston","Waterford Township",
+            "Fenton","Brighton","Howell","Waterford Township",
             "Chelsea","Milford",
           ],
           address: { "@type": "PostalAddress", addressRegion: "MI", addressCountry: "US" },
