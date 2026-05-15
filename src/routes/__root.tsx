@@ -95,6 +95,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Delta Dock & Hoist LLC",
+          url: "https://lakefront-magic-maker.lovable.app/",
+          telephone: "+1-734-646-9055",
+          email: "deltadock.hoist@gmail.com",
+          areaServed: "South East Michigan",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Delta Dock & Hoist LLC",
+          url: "https://lakefront-magic-maker.lovable.app/",
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,

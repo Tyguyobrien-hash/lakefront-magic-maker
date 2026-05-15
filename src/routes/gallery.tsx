@@ -17,6 +17,26 @@ export const Route = createFileRoute("/gallery")({
       { property: "og:description", content: "See recent dock and hoist installations from Delta Dock & Hoist." },
       { property: "og:image", content: g1 },
     ],
+    links: [
+      { rel: "canonical", href: "https://lakefront-magic-maker.lovable.app/gallery" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Delta Dock & Hoist — Recent Installs",
+          description: "Photo gallery of recent dock and boat hoist installations across South East Michigan.",
+          url: "https://lakefront-magic-maker.lovable.app/gallery",
+          isPartOf: {
+            "@type": "WebSite",
+            name: "Delta Dock & Hoist LLC",
+            url: "https://lakefront-magic-maker.lovable.app/",
+          },
+        }),
+      },
+    ],
   }),
   component: GalleryPage,
 });
@@ -43,6 +63,7 @@ function GalleryPage() {
         </p>
       </section>
       <section className="mx-auto max-w-6xl px-6 pb-24">
+        <h2 className="sr-only">Recent dock and hoist installation photos</h2>
         <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4">
           {photos.map((p) => (
             <figure key={p.src} className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-soft)] break-inside-avoid">
