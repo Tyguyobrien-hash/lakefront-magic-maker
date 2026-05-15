@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const SITE = "https://deltadockandhoist.com";
+const SITE = "https://lakefront-magic-maker.lovable.app";
 
 const urls = [
   { loc: "/", priority: "1.0", changefreq: "monthly" },
