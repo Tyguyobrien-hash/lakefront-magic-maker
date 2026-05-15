@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
           areaServed: [
             "White Lake","Whitmore Lake","Lake Orion","Pinckney","Livingston County",
             "Fenton","Brighton","Howell","Waterford Township",
-            "Chelsea","Milford",
+            "Chelsea","Milford","Village of Clarkston",
           ],
           address: { "@type": "PostalAddress", addressRegion: "MI", addressCountry: "US" },
           aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "4" },

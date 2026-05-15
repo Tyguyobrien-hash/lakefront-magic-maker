@@ -13,6 +13,7 @@ const locations = [
   "Waterford Township",
   "Chelsea",
   "Milford",
+  "Village of Clarkston",
 ];
 
 export function Footer() {
