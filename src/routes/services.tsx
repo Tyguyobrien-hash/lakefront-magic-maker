@@ -12,6 +12,45 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Dock & Hoist Services — Delta Dock & Hoist" },
       { property: "og:description", content: "Full-service dock and hoist solutions for SE Michigan lakes." },
     ],
+    links: [
+      { rel: "canonical", href: "https://lakefront-magic-maker.lovable.app/services" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Delta Dock & Hoist Services",
+          itemListElement: [
+            {
+              "@type": "Service",
+              position: 1,
+              name: "Dock Installation",
+              description: "Custom dock layouts, leveled and anchored for any lake bed — sand, muck, or rock.",
+              areaServed: "South East Michigan",
+              provider: { "@type": "LocalBusiness", name: "Delta Dock & Hoist LLC" },
+            },
+            {
+              "@type": "Service",
+              position: 2,
+              name: "Boat Hoist Installation & Repair",
+              description: "Vertical, cantilever, and pontoon-style lifts sized to your boat and shoreline.",
+              areaServed: "South East Michigan",
+              provider: { "@type": "LocalBusiness", name: "Delta Dock & Hoist LLC" },
+            },
+            {
+              "@type": "Service",
+              position: 3,
+              name: "Seasonal Dock & Hoist Removal",
+              description: "Fall pull-outs, on-shore staging, and spring re-installs scheduled ahead of time.",
+              areaServed: "South East Michigan",
+              provider: { "@type": "LocalBusiness", name: "Delta Dock & Hoist LLC" },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: ServicesPage,
 });
@@ -35,6 +74,7 @@ function ServicesPage() {
       </section>
 
       <section className="mx-auto grid max-w-6xl gap-6 px-6 pb-24 md:grid-cols-2 lg:grid-cols-3">
+        <h2 className="sr-only">Our shoreline services</h2>
         {services.map(({ icon: Icon, img, title, text }) => (
           <article key={title} className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-soft)] transition-[var(--transition-smooth)] hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">
             {img && (

@@ -10,15 +10,17 @@ import deltaClip from "@/assets/video/delta-clip.mp4";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Delta Dock & Hoist | Professional Boat Hoist Repair & Dock Services in SE Michigan" },
-      { name: "description", content: "Delta Dock & Hoist provides professional boat hoist repair, dock installation, removal, and seasonal service across South East Michigan. 5-star rated, fully insured, friendly local crew." },
-      { property: "og:title", content: "Delta Dock & Hoist | Professional Boat Hoist Repair & Dock Services in SE Michigan" },
+      { title: "Delta Dock & Hoist — SE Michigan Dock & Hoist Services" },
+      { name: "description", content: "Professional boat hoist repair and dock services in South East Michigan. 5-star rated, fully insured, and friendly local crew." },
+      { property: "og:title", content: "Delta Dock & Hoist — SE Michigan Dock & Hoist Services" },
       { property: "og:description", content: "Professional boat hoist repair and dock services across South East Michigan lakes. 5-star rated and fully insured." },
       { property: "og:image", content: heroImg },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: heroImg },
-      { rel: "canonical", href: "https://deltadockandhoist.com/" } as any,
+    ],
+    links: [
+      { rel: "canonical", href: "https://lakefront-magic-maker.lovable.app/" },
     ],
     scripts: [
       {
@@ -63,7 +65,7 @@ function Index() {
             <Star className="h-3.5 w-3.5 fill-accent text-accent" /> 5.0 rated • South East Michigan
           </span>
           <h1 className="max-w-3xl font-serif text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
-            Your shoreline, perfectly set in place.
+            Professional Dock & Boat Hoist Services in South East Michigan
           </h1>
           <p className="mt-6 max-w-xl text-lg text-white/85">
             Professional dock and boat hoist installation, removal, and seasonal
@@ -89,6 +91,7 @@ function Index() {
       {/* TRUST STRIP */}
       <section className="border-b border-border/60 bg-secondary/60">
         <div className="mx-auto grid max-w-6xl gap-6 px-6 py-10 sm:grid-cols-3">
+          <h2 className="sr-only">Why choose Delta Dock & Hoist</h2>
           {[
             { icon: ShieldCheck, title: "Fully Insured", text: "Licensed crew, careful with your shoreline." },
             { icon: Waves, title: "All Lake Types", text: "Sandy, mucky, rocky — we’ve worked them all." },
