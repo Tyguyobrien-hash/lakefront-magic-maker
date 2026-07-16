@@ -253,7 +253,6 @@ function Index() {
           </p>
           <ul className="mt-8 space-y-3">
             {[
-              "Free quotes & honest pricing",
               "Spring installs and fall removals scheduled in advance",
               "Local crew, fast response across SE Michigan",
             ].map((item) => (
